@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Images Resize & Compress - while uploading (JS + HTML + CSS)</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Compress and Resize an Image</h1>
+      <p>
+        Upload your image and then compress it
+      </p>
+      <input id="upload" type="file" accept="image/*" />
+
+      <div style="margin-top: 5px;">
+        <span>Resizing: </span>
+        <input type="range" min="1" max="100" value="75" id="resizingRange" /><span id="percent"> 75</span>%
+      </div>
+      <div style="margin-top: 5px; margin-left: 8px;">
+        <span>Quality: </span>
+        <input type="range" min="1" max="100" value="75" id="qualityRange" /><span id="quality"> 75</span>
+      </div>
+
+      <div class="images-block">
+        
+        <div class="original">
+          <div>
+            <h2>Original Image</h2>
+            <div><b>Size: </b><span id="originalsize">50 KB (480*320)</span></div>
+            <img
+              style="margin-top: 5px;"
+              id="originalImage"
+              src="demo.jpg"
+              crossorigin="anonymous"
+            />
+          </div>          
+        </div>
+
+        <div class="compressed">
+          <h2>Compressed Image</h2>
+          <div><b>Size: </b><span id="size"></span></div>
+          <img
+          style="margin-top: 5px;" id="compressedImage" />
+          <!-- <div>
+            <button id="uploadButton">Upload to Imgur</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>
