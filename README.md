@@ -1,2 +1,4 @@
 # Compress-Resize
-Images resizer &amp; compressor (with JS Canvas)
+Images resizer &amp; compressor (with Canvas)
+Using: HTML + CSS + JS
+
